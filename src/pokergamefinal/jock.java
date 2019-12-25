@@ -7,6 +7,7 @@ package pokergamefinal;
 
 import java.awt.Color;
 import java.awt.List;
+import static java.lang.System.in;
 import java.util.ArrayList;
 import java.util.Collections;
 import javax.swing.BorderFactory;
@@ -62,6 +63,14 @@ public class jock extends javax.swing.JFrame {
         jLabel18.setVisible(false);
         jLabel19.setVisible(false);
         jLabel21.setVisible(false);
+        unu.setVisible(false);
+        doi.setVisible(false);
+        trei.setVisible(false);
+        patru.setVisible(false);
+        cinci.setVisible(false);
+        sase.setVisible(false);
+        sapte.setVisible(false);
+        opt.setVisible(false);
         setLocationRelativeTo(null);
         credit = 50;
         cards = new ArrayList<>();
@@ -84,10 +93,10 @@ public class jock extends javax.swing.JFrame {
 
         jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
+        cinci = new javax.swing.JLabel();
+        opt = new javax.swing.JLabel();
+        sapte = new javax.swing.JLabel();
+        sase = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         flush = new javax.swing.JLabel();
         fourOfOkind = new javax.swing.JLabel();
@@ -97,10 +106,10 @@ public class jock extends javax.swing.JFrame {
         twoPair = new javax.swing.JLabel();
         threeOfKind = new javax.swing.JLabel();
         straight = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
+        patru = new javax.swing.JLabel();
+        trei = new javax.swing.JLabel();
+        doi = new javax.swing.JLabel();
+        unu = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -116,6 +125,7 @@ public class jock extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Video Poker");
         setLocation(new java.awt.Point(100, 100));
         setLocationByPlatform(true);
         setPreferredSize(new java.awt.Dimension(850, 550));
@@ -145,25 +155,29 @@ public class jock extends javax.swing.JFrame {
         jLabel2.setBounds(120, 440, 100, 40);
         jLabel2.getAccessibleContext().setAccessibleName("credit");
 
-        jLabel13.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
-        jLabel13.setText("30%");
-        getContentPane().add(jLabel13);
-        jLabel13.setBounds(60, 140, 50, 30);
+        cinci.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        cinci.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        cinci.setText("30%");
+        getContentPane().add(cinci);
+        cinci.setBounds(0, 140, 100, 30);
 
-        jLabel14.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
-        jLabel14.setText("30%");
-        getContentPane().add(jLabel14);
-        jLabel14.setBounds(60, 20, 50, 30);
+        opt.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        opt.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        opt.setText("30%");
+        getContentPane().add(opt);
+        opt.setBounds(0, 20, 100, 30);
 
-        jLabel15.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
-        jLabel15.setText("30%");
-        getContentPane().add(jLabel15);
-        jLabel15.setBounds(60, 60, 50, 30);
+        sapte.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        sapte.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        sapte.setText("30%");
+        getContentPane().add(sapte);
+        sapte.setBounds(0, 60, 100, 30);
 
-        jLabel20.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
-        jLabel20.setText("30%");
-        getContentPane().add(jLabel20);
-        jLabel20.setBounds(60, 100, 50, 30);
+        sase.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        sase.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        sase.setText("30%");
+        getContentPane().add(sase);
+        sase.setBounds(0, 100, 100, 30);
 
         jPanel2.setOpaque(false);
         jPanel2.setLayout(null);
@@ -216,25 +230,25 @@ public class jock extends javax.swing.JFrame {
         jPanel2.add(straight);
         straight.setBounds(310, 0, 290, 34);
 
-        jLabel3.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
-        jLabel3.setText("10%");
-        jPanel2.add(jLabel3);
-        jLabel3.setBounds(610, 0, 60, 30);
+        patru.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        patru.setText("10%");
+        jPanel2.add(patru);
+        patru.setBounds(610, 0, 120, 30);
 
-        jLabel5.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
-        jLabel5.setText("15%");
-        jPanel2.add(jLabel5);
-        jLabel5.setBounds(610, 40, 70, 30);
+        trei.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        trei.setText("15%");
+        jPanel2.add(trei);
+        trei.setBounds(610, 40, 110, 30);
 
-        jLabel7.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
-        jLabel7.setText("20%");
-        jPanel2.add(jLabel7);
-        jLabel7.setBounds(610, 80, 70, 30);
+        doi.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        doi.setText("20%");
+        jPanel2.add(doi);
+        doi.setBounds(610, 80, 120, 30);
 
-        jLabel12.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
-        jLabel12.setText("25%");
-        jPanel2.add(jLabel12);
-        jLabel12.setBounds(610, 120, 70, 30);
+        unu.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        unu.setText("25%");
+        jPanel2.add(unu);
+        unu.setBounds(610, 120, 120, 30);
 
         getContentPane().add(jPanel2);
         jPanel2.setBounds(100, 20, 690, 180);
@@ -461,6 +475,100 @@ private boolean checkStraightFlush(int a,int b,int c,int x,int y)
 {
     return checkStraight(a/4, b/4, c/4, x/4, y/4) && checkFlush(a%4, b%4, c%4, x%4, y%4);
 }
+private int getCard()
+{
+    int i;
+    for( i = 1 ; i <= 5 ; i++)
+    {
+        if(pos.contains(i))
+            continue;
+        else
+            break;
+    }
+    int card = 0;
+    switch (i)
+    {
+        case 1:
+            card = card1;
+            break;
+        
+        case 2:
+            card =  card2;
+            break;
+        case 3:
+            card = card3;
+            break;
+        case 4:
+            card = card4;
+            break;
+        case 5:
+            card = card5;
+            break;
+        default:break;
+            
+    }
+    return card;
+}
+private void getProc(ArrayList<Integer> e , int x)
+{
+    ArrayList <Integer> cc = new ArrayList<>();
+    for(int i = 0 ; i < 52 ; i ++)
+    {
+        if(e.contains(i) == false && i != x )
+            cc.add(i);
+    }
+    int onePair = 0 ,twoPair = 0 , threeKind = 0 , straight = 0 , flush = 0 , full = 0 , fourKind = 0 , staightFlush = 0;
+    System.out.println("Elemente vector : "+Integer.toString(e.get(0)) + " "+ Integer.toString(e.get(1)) + " "+Integer.toString(e.get(2)) + " " + Integer.toString(e.get(3))  );
+    for(int i : cc)
+    {
+        if(checkStraight(e.get(0), e.get(1),e.get(2), e.get(3), i) )
+            staightFlush++;
+        
+        if(checkFourKind(e.get(0)/4, e.get(1)/4,e.get(2)/4, e.get(3)/4, i/4) )
+            fourKind++;
+        
+        if(checkFull(e.get(0)/4, e.get(1)/4,e.get(2)/4, e.get(3)/4, i/4) )
+            full++;
+        
+        if(checkFlush(e.get(0)%4, e.get(1)%4,e.get(2)%4, e.get(3)%4, i%4) )
+            flush++;
+        
+        if(checkStraight(e.get(0)/4, e.get(1)/4,e.get(2)/4, e.get(3)/4, i/4) )
+            straight++;
+        
+        if(checkThreeKind(e.get(0)/4, e.get(1)/4,e.get(2)/4, e.get(3)/4, i/4) )
+            threeKind++;
+        
+        if(checkTwoPair(e.get(0)/4, e.get(1)/4,e.get(2)/4, e.get(3)/4, i/4)   )
+            twoPair++;
+        
+        if(checkOnePair(e.get(0)/4, e.get(1)/4,e.get(2)/4, e.get(3)/4, i/4) )
+        {
+            onePair++;
+            System.out.println(Integer.toString(i));
+        }
+    }
+    float r = (float)100/47;
+    unu.setText(Float.toString(r*onePair)  +"%"    );
+    doi.setText(Float.toString(r*twoPair)+"%");
+    trei.setText(Float.toString(r*threeKind)+"%");
+    patru.setText(Float.toString(r*straight )+"%");
+    cinci.setText(Float.toString(r*flush )+"%");
+    sase.setText(Float.toString(r*full )+"%");
+    sapte.setText(Float.toString(r*fourKind )+"%");
+    opt.setText(Float.toString(r*staightFlush )+"%");
+}
+private void enableProc(boolean state)
+{
+    unu.setVisible(state);
+    doi.setVisible(state);
+    trei.setVisible(state);
+    patru.setVisible(state);
+    cinci.setVisible(state);
+    sase.setVisible(state);
+    sapte.setVisible(state);
+    opt.setVisible(state);
+}
     private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
         // TODO add your handling code here:
        
@@ -474,13 +582,31 @@ private boolean checkStraightFlush(int a,int b,int c,int x,int y)
             else {
                 jLabel16.setVisible(true);
                 pos.add(1);
+                if(pos.size() == 4)
+                {
+                   
+                    ArrayList<Integer> mm = new ArrayList<>();
+                    mm.add(card1);
+                    mm.add(card2);
+                    mm.add(card3);
+                    mm.add(card4);
+                    mm.add(card5);
+                    System.out.println("CArtea este : "+Integer.toString(getCard()));
+                    
+                    mm.remove(new Integer(getCard()));
+                    System.out.println(Integer.toString(mm.size()));
+                    getProc(mm,getCard());
+                     enableProc(true);
+                }
+                else enableProc(false);
             }
         }
         
     }//GEN-LAST:event_jLabel8MouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-if(jButton1.getText()=="BET")
+        enableProc(false);
+        if(jButton1.getText()=="BET")
 {
     jButton1.setText("PLAY AGAIN");
     int nr = 5;
@@ -625,6 +751,23 @@ if(!state)
             else {
                 jLabel17.setVisible(true);
                 pos.add(2);
+                if(pos.size() == 4)
+                {
+                   
+                    ArrayList<Integer> mm = new ArrayList<>();
+                    mm.add(card1);
+                    mm.add(card2);
+                    mm.add(card3);
+                    mm.add(card4);
+                    mm.add(card5);
+                    System.out.println("CArtea este : "+Integer.toString(getCard()));
+                    
+                    mm.remove(new Integer(getCard()));
+                    System.out.println(Integer.toString(mm.size()));
+                    getProc(mm,getCard());
+                     enableProc(true);
+                }
+                else enableProc(false);
             }
         }        // TODO add your handling code here:
     }//GEN-LAST:event_jLabel4MouseClicked
@@ -640,6 +783,23 @@ if(!state)
             else {
                 jLabel18.setVisible(true);
                 pos.add(3);
+                if(pos.size() == 4)
+                {
+                   
+                    ArrayList<Integer> mm = new ArrayList<>();
+                    mm.add(card1);
+                    mm.add(card2);
+                    mm.add(card3);
+                    mm.add(card4);
+                    mm.add(card5);
+                    System.out.println("CArtea este : "+Integer.toString(getCard()));
+                    
+                    mm.remove(new Integer(getCard()));
+                    System.out.println(Integer.toString(mm.size()));
+                    getProc(mm,getCard());
+                     enableProc(true);
+                }
+                else enableProc(false);
             }
         }        // TODO add your handling code here:
     }//GEN-LAST:event_jLabel9MouseClicked
@@ -655,6 +815,23 @@ if(!state)
             else {
                 jLabel19.setVisible(true);
                 pos.add(4);
+                if(pos.size() == 4)
+                {
+                   
+                    ArrayList<Integer> mm = new ArrayList<>();
+                    mm.add(card1);
+                    mm.add(card2);
+                    mm.add(card3);
+                    mm.add(card4);
+                    mm.add(card5);
+                    System.out.println("CArtea este : "+Integer.toString(getCard()));
+                    
+                    mm.remove(new Integer(getCard()));
+                    System.out.println(Integer.toString(mm.size()));
+                    getProc(mm,getCard());
+                     enableProc(true);
+                }
+                else enableProc(false);
             }
         }        // TODO add your handling code here:
     }//GEN-LAST:event_jLabel10MouseClicked
@@ -670,6 +847,23 @@ if(!state)
             else {
                 jLabel21.setVisible(true);
                 pos.add(5);
+                if(pos.size() == 4)
+                {
+                   
+                    ArrayList<Integer> mm = new ArrayList<>();
+                    mm.add(card1);
+                    mm.add(card2);
+                    mm.add(card3);
+                    mm.add(card4);
+                    mm.add(card5);
+                    System.out.println("CArtea este : "+Integer.toString(getCard()));
+                    
+                    mm.remove(new Integer(getCard()));
+                    System.out.println(Integer.toString(mm.size()));
+                    getProc(mm,getCard());
+                     enableProc(true);
+                }
+                else enableProc(false);
             }
         }        // TODO add your handling code here:
     }//GEN-LAST:event_jLabel6MouseClicked
@@ -710,6 +904,8 @@ if(!state)
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel cinci;
+    private javax.swing.JLabel doi;
     private javax.swing.JLabel flush;
     private javax.swing.JLabel fourOfOkind;
     private javax.swing.JLabel fullHouse;
@@ -717,30 +913,28 @@ if(!state)
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel onePair;
+    private javax.swing.JLabel opt;
+    private javax.swing.JLabel patru;
+    private javax.swing.JLabel sapte;
+    private javax.swing.JLabel sase;
     private javax.swing.JLabel straight;
     private javax.swing.JLabel straightFlush;
     private javax.swing.JLabel threeOfKind;
+    private javax.swing.JLabel trei;
     private javax.swing.JLabel twoPair;
+    private javax.swing.JLabel unu;
     // End of variables declaration//GEN-END:variables
 }
